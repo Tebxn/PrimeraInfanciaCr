@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Recuperar contraseña</title>
-	<link rel="stylesheet" href="../Dist/Css/CambioPassword.css">
+	<link rel="stylesheet" href="../Css/CambioPassword.css">
 </head>
 <body>
 
