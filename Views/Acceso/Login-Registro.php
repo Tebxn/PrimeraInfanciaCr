@@ -7,7 +7,7 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="../Css/Login.css" />
     <title>Sign in & Sign up Form</title>
   </head>
   <body>
@@ -73,6 +73,6 @@
       </div>
     </div>
 
-    <script src="Login.js"></script>
+    <script src="Views\Dist\js\Login.js"></script>
   </body>
 </html>
