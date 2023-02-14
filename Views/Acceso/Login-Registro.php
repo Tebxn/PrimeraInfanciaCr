@@ -56,7 +56,7 @@
               Regístrese
             </button>
           </div>
-          <img src="../Img/desk.svg" class="image" alt="" />
+          <img src="../Svg/desk.svg" class="image" alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -68,11 +68,11 @@
               Inicie Sesión
             </button>
           </div>
-          <img src="../Img/teacher.svg" class="image" alt="" />
+          <img src="../Svg/teacher.svg" class="image" alt="" />
         </div>
       </div>
     </div>
 
-    <script src="Views\Dist\js\Login.js"></script>
+    <script src="..\Js\Login.js"></script>
   </body>
 </html>
