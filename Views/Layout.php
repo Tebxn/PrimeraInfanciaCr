@@ -7,10 +7,10 @@ echo '
     <img class="logo" src="Img\Primerainfanciacr-isologo-vertical-05-70-e1607987714656.png">
     <nav>
       <ul class="nav_links">
-        <li><a href="#"> Inicio </a></li>
-        <li><a href="#"> Tienda </a></li>
-        <li><a href="#"> Banco de Recursos </a></li>
-        <li><a href="#"> Mi Perfil </a></li>
+        <li><a class="link" href="#"> Inicio </a></li>
+        <li><a class="link" href="#"> Tienda </a></li>
+        <li><a class="link" href="#"> Banco de Recursos </a></li>
+        <li><a class="link" href="#"> Mi Perfil </a></li>
       </ul>
     </nav>
     <a class="nav_a_button" href="#"><button class="nav_button">Cerrar Sesión</button></a>

@@ -32,7 +32,7 @@ ul{
 }
 .footer-col h4{
 	font-size: 18px;
-	color: #0ECD7A;
+	color: #ffffff;
 	margin-bottom: 35px;
 	font-weight: 500;
 	position: relative;
@@ -52,15 +52,14 @@ ul{
 }
 .footer-col ul li a{
 	font-size: 16px;
-	color: #0ECD7A;
+	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
-	color: #0ECD7A;
 	display: block;
 	transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-	color: #ffffff;
+	color: #0ECD7A;
 	padding-left: 8px;
 }
 

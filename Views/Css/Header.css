@@ -1,20 +1,22 @@
 * {
     box-sizing: border-box;
+    background-color: #0ECD7A;
     margin: 0;
-    padding: 0;    
+    padding: 10px;    
 }
 
 header{
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
-    background-color: #0833A2;
+    background-color: #0ECD7A;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 1% 10px 0px;
+    height: 10%;
 }
 
-a{
+.link{
     font-size: 16px;
     display: inline;
     color:#ffffff;
@@ -31,23 +33,24 @@ a{
 
 .nav_links li {
     display: inline-block;
+    color:#ffffff;
     padding: 0px 20px;
 }
 
 .nav_links li a{
     transition: all 0.3s ease 0s;
-    color: #0ECD7A;
+    color: #ffffff;
 }
 
 .nav_links li a:hover{
-    color: #ffffff;
+    color: #0833A2;
 }
 
 .nav_button {
     border: 2px;
     padding: 6px 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: #0ECD7A;
+    background-color: #0833A2;
     color: #ffffff;
     border: none;
     border-radius: 80px;
