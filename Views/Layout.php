@@ -38,7 +38,7 @@ echo '
             <ul>
               <li><a class="a_contacto" href="#"> +506 8672 7296 </a></li>
               <li><a class="a_contacto" href="#"> adrianart@primerainfancia.cr </a></li>
-              <li><a class="a_contacto" href="#">soporte@primerainfancia.cr</a></li>
+              <li><a class="a_contacto" href="#"> soporte@primerainfancia.cr</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -63,7 +63,7 @@ echo '
 
   </footer>
   <footer class="footer_abajo">
-    <p>&COPY 2022  Primera Infancia. Todos los derechos reservados. </p>
+    <p>&COPY 2023  Primera Infancia. Todos los derechos reservados. </p>
   </footer>
 ';
 }
