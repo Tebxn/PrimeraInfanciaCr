@@ -3,7 +3,7 @@
 function MostrarNavbar()
 {
 echo '
-  <header>
+  <header class="header1">
     <img class="logo" src="Img\Primerainfanciacr-isologo-vertical-05-70-e1607987714656.png">
     <nav>
       <ul class="nav_links">
