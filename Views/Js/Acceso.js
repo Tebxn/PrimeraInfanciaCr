@@ -1,11 +1,13 @@
+
 function HabilitarCampos(){
-  var correo = document.getElementById("correoElectronico").value;
-  var clave = document.getElementById("contrasena").value;
+  var correo = document.getElementById("emailLogin").value;
+  var clave = document.getElementById("passwordLogin").value;
 
   if(correo.trim() != "" && clave.trim() != "")
   {
     //docuement.getElementById("btnIniciarSesion").disable = false;
     $("#btnIniciarSesion").prop("disabled", false);
+    console.log('Email Valido');
   }else{
     $("#btnIniciarSesion").prop("disabled", true);
   }

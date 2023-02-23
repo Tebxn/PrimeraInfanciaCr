@@ -1,5 +1,4 @@
 <?php
-//MODELO
 include 'ConexionModel.php';
 
 function IniciarSesionModel($correoElectronico, $contrasena)
@@ -14,11 +13,11 @@ function IniciarSesionModel($correoElectronico, $contrasena)
     return $respuesta;
 }
 
-function RegistrarUsuarioModel($correo, $contrasena, $nombre, $apellido1, $apellido2, $direccion)
+function RegistrarUsuarioModel($correo, $nombre, $contrasena, $apellido1, $apellido2, $direccion)
 {
     $instancia = Open();
     
-    $sentencia = "CALL RegistrarUsuario('$correo','$contrasena','$nombre','$apellido1','$apellido2','$direccion');";
+    $sentencia = "CALL RegistrarUsuario('$correo','$nombre','$contrasena','$apellido1','$apellido2','$direccion');";
     $respuesta = $instancia -> query($sentencia);
 
     Close($instancia);

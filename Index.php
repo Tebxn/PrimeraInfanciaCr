@@ -1,5 +1,5 @@
 <?php
 
-    header("Location: Views/Inicio.php");
+    header("Location: Views/Login-Registro.php");
 
 ?>

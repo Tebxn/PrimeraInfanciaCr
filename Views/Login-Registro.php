@@ -1,3 +1,7 @@
+<?php
+  include '../Controllers/AccesoController.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,81 +11,87 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../Css/Login.css" />
+    <link rel="stylesheet" href="Css/Login.css" />
+    
     <title>Acceder</title>
   </head>
   <body>
-
+ 
     <!-- LOG IN-->
 
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+
+          <form action="" method="post" class="sign-in-form">
             <h2 class="title">Inicie Sesión</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="emailLogin" name="emailLogin" placeholder="Correo Electronico" />
+              <input type="email" id="emailLogin" name="emailLogin" placeholder="Correo Electronico" required onkeyup="HabilitarCampos()"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Contraseña" />
+              <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Contraseña" required onkeyup="HabilitarCampos()"/>
             </div>
-            <input type="submit" id="btnIniciarSesion" name="btnIniciarSesion" value="Iniciar Sesión" class="btn solid" />
+            <input type="submit" id="btnIniciarSesion" name="btnIniciarSesion" value="Iniciar Sesión" class="btn solid" disabled/>
           </form>
 
     <!-- REGISTRARSE -->
 
-          <form action="" class="sign-up-form">
+          <form action="" method="post" class="sign-up-form">
             <h2 class="title">Registrarse</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="emailRegistro" name="emailRegistro" placeholder="Correo Electronico" />
+              <input type="email" class="form-control" placeholder="Correo Electronico"  id="emailRegistro" name="emailRegistro" required>
             </div>
 
             <div id="mensaje"></div> <!-- mostrar si el correo ya esta registrado -->
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" required disabled/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="apellido1" name="apellido1" placeholder="Primer Apellido" />
+              <input type="text" id="apellido1" name="apellido1" placeholder="Primer Apellido" required disabled/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="apellido2" name="apellido2" placeholder="Segundo Apellido" />
+              <input type="text" id="apellido2" name="apellido2" placeholder="Segundo Apellido" required disabled/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="direccion" name="direccion" placeholder="Direccion" />
+              <input type="text" id="direccion" name="direccion" placeholder="Direccion" required disabled/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" />
+              <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required disabled/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="contrasena2" name="contrasena2" placeholder="Confirmar Contraseña" />
+              <input type="password" id="contrasena2" name="contrasena2" placeholder="Confirmar Contraseña" required disabled onblur="HabilitarRegistro()"/>
             </div>
-            <input type="submit" id="btnRegistrarse" name="btnRegistrarse" class="btn" value="Registrarse" />
+
+            <div id="mensajePassword"></div>
+
+            <input type="submit" id="btnRegistrarse" name="btnRegistrarse" class="btn" value="Registrarse"/>
           </form>
+
         </div>
       </div>
 
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
-            <h3>Nuevo Aqui?</h3>
+            <h3>¿Nuevo Aqui?</h3>
             <p>
-              Únase a un equipo de expertos en la materia que le proveerán recursos para una mejor educación.
+              Unete a un equipo de expertos en la materia que le proveerán recursos para una mejor educación para los más pequeños
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Regístrese
             </button>
           </div>
-          <img src="../Svg/desk.svg" class="image" alt="" />
+          <img src="Svg/desk.svg" class="image" alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -93,25 +103,22 @@
               Inicie Sesión
             </button>
           </div>
-          <img src="../Svg/teacher.svg" class="image" alt="" />
+          <img src="Svg/teacher.svg" class="image" alt="" />
         </div>
       </div>
     </div>
 
-    <script src="..\Js\Login.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="Js\Acceso.js"></script>
+    <script src="Js\Login.js"></script>
   </body>
 
-
 <script>
-  
-//VALIDAR QUE EL CORREO ELECTRONICO QUE SE DESEA REGISTRAR NO EXISTA EN LA BASE DE DATOS, DE MANERA ASYNC.
-//AJAX
 
-$('#correoElectronico').blur(function(e){
+$('#emailRegistro').blur(function(e){
       e.preventDefault();
   
       var email = $('#emailRegistro').val();
-      var dataString = 'email='+email;
 
       $.ajax({
         type: "POST",
@@ -128,6 +135,10 @@ $('#correoElectronico').blur(function(e){
           }else{
             console.log('Correo electronico valido');
             $('#mensaje').html('Correo electronico valido');
+            $("#nombre").prop("disabled", false);
+            $("#apellido1").prop("disabled", false);
+            $("#apellido2").prop("disabled", false);
+            $("#direccion").prop("disabled", false);
             $("#contrasena").prop("disabled", false);
             $("#contrasena2").prop("disabled", false);
           }
