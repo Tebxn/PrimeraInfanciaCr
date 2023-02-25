@@ -1,6 +1,6 @@
 <?php
 
-include '../../Models/ConexionModel.php';
+include_once '../../Models/ConexionModel.php';
 
 
 $instancia = Open();

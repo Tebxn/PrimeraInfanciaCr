@@ -1,5 +1,5 @@
 <?php
-  include '../Controllers/AccesoController.php';
+  include_once '../Controllers/AccesoController.php';
 ?>
 
 <!DOCTYPE html>

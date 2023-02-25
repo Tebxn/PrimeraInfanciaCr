@@ -1,5 +1,5 @@
 <?php
-include 'ConexionModel.php';
+include_once 'ConexionModel.php';
 
 function IniciarSesionModel($correoElectronico, $contrasena)
 {

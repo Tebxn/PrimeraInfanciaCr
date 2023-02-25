@@ -1,5 +1,5 @@
 <?php
-    include 'Layout.php';
+    include_once 'Layout.php';
 ?>
 
 <!DOCTYPE html>

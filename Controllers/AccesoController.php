@@ -1,6 +1,9 @@
 <?php
-include '../Models/AccesoModel.php';
-
+include_once '../Models/AccesoModel.php';
+if(session_status() == PHP_SESSION_NONE)
+{
+  session_start();
+} 
 
 if(isset($_POST["btnIniciarSesion"]))
 {
@@ -54,6 +57,12 @@ if(isset($_POST["btnRegistrarse"]))
     {
         echo '<script>alert("ERROR")</script>';
     }
+}
+
+if(isset($_POST["btnCerrarSesion"]))
+{
+    session_destroy();
+    header("Location: ../Views/Login-Registro.php");
 }
 
 ?>

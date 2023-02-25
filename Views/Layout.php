@@ -1,7 +1,18 @@
 <?php
 
+include_once '../Controllers/AccesoController.php';
+
+if(session_status() == PHP_SESSION_NONE)
+{
+  session_start();
+} 
+
 function MostrarNavbar()
 {
+  if($_SESSION["Correo"] == null)
+  {
+    header("Location: ../Views/Login-Registro.php");
+  }
 echo '
   <header class="header1">
     <img class="logo" src="Img\Primerainfanciacr-isologo-vertical-05-70-e1607987714656.png">
@@ -13,7 +24,12 @@ echo '
         <li><a class="link" href="#"> Mi Perfil </a></li>
       </ul>
     </nav>
-    <a class="nav_a_button" href="#"><button class="nav_button">Cerrar Sesión</button></a>
+    <form action="" method="post">
+      <a class="nav_a_button">
+        <input type="submit" class="btn btn-primary btn-block" id="btnCerrarSesion" name="btnCerrarSesion" value="Cerrar Sesion"/>
+      </a>
+    </form>
+
   </header>
 ';
 }
