@@ -22,7 +22,6 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-
           <form action="" method="post" class="sign-in-form">
             <h2 class="title">Inicie Sesión</h2>
             <div class="input-field">
@@ -33,6 +32,9 @@
               <i class="fas fa-lock"></i>
               <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Contraseña" required onkeyup="HabilitarCampos()"/>
             </div>
+             <p class="mb-1">
+               <a href="RecuperarPassword.php">¿Olvidó su contraseña?</a>
+              </p>
             <input type="submit" id="btnIniciarSesion" name="btnIniciarSesion" value="Iniciar Sesión" class="btn solid" disabled/>
           </form>
 

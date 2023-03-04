@@ -3,8 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
 	<title>Recuperar contraseña</title>
-	<link rel="stylesheet" href="../Css/CambioPassword.css">
+	<link rel="stylesheet" href="Css/CambioPassword.css">
 </head>
 <body>
 
@@ -18,13 +22,13 @@
       Recuperar contraseña
       </h2>
       
-      <div class="inputDiv">
-        <label class="inputLabel" for="password">Correo electrónico</label>
-        <input type="password" id="password" name="password" required>
-      </div>
+     <div class="inputDiv"> 
+       <label class="inputLabel" for="email">Correo electrónico</label> 
+        <input type="email" id="email" name="email" required> 
+  </div> 
     
     <div class="buttonWrapper">
-      <button type="submit" id="submitButton" onclick="validateSignupForm()" class="submitButton pure-button pure-button-primary">
+      <button type="submit" id="submitButton" onclick="validateSignupForm()" class="submitButton pure-button-primary">
         <span>Enviar</span>
         <span id="loader"></span>
       </button>

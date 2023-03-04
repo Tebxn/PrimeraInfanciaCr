@@ -237,7 +237,7 @@
   .container.sign-up-mode .right-panel {
     pointer-events: all;
   }
-  
+
   @media (max-width: 870px) {
     .container {
       min-height: 800px;
