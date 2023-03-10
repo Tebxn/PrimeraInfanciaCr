@@ -1,3 +1,9 @@
+<?php
+include_once '../Controllers/usuariosController.php'
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +30,11 @@
       
      <div class="inputDiv"> 
        <label class="inputLabel" for="email">Correo electrónico</label> 
-        <input type="email" id="email" name="email" required> 
+        <input type="email" id="email" name="email"  required onblur="ValidarCorreo();"> 
   </div> 
     
     <div class="buttonWrapper">
-      <button type="submit" id="submitButton" onclick="validateSignupForm()" class="submitButton pure-button-primary">
+      <button type="submit" id="RecuperarButton" name= "RecuperarButton" onclick="validateSignupForm()" class="submitButton pure-button-primary">
         <span>Enviar</span>
         <span id="loader"></span>
       </button>
