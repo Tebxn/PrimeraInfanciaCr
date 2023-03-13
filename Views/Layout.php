@@ -1,7 +1,22 @@
 <?php
-
 include_once '../Controllers/AccesoController.php';
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Configuración</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="Css/Header.css">
+  <link rel="stylesheet" type="text/css" href="Css/Footer.css">
+</head>
+
+<body>
+
+<?php
 if(session_status() == PHP_SESSION_NONE)
 {
   session_start();
@@ -21,7 +36,7 @@ echo '
         <li><a class="link" href="#"> Inicio </a></li>
         <li><a class="link" href="#"> Tienda </a></li>
         <li><a class="link" href="#"> Banco de Recursos </a></li>
-        <li><a class="link" href="#"> Mi Perfil </a></li>
+        <li><a class="link" href="./actualizarUsuario.php"> Mi Perfil </a></li>
       </ul>
     </nav>
     <form action="" method="post">
@@ -138,3 +153,6 @@ echo '
 }
 
 ?>
+
+<body>
+  <html>
